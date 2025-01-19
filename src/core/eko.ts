@@ -50,7 +50,7 @@ export class Eko {
     Eko.tools.forEach((tool) => this.toolRegistry.registerTool(tool));
   }
 
-  public async generate(prompt: string, param?: EkoInvokeParam): Promise<Workflow> {
+  public async generate2(prompt: string, param?: EkoInvokeParam): Promise<Workflow> {
     let toolRegistry = this.toolRegistry;
     if (param && param.tools && param.tools.length > 0) {
       toolRegistry = new ToolRegistry();
